@@ -23,7 +23,7 @@ const nextConfig = {
               "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
               "style-src 'self' 'unsafe-inline'",
               "img-src 'self' data: https:",
-              "connect-src 'self' https://generativelanguage.googleapis.com",
+              "connect-src 'self' https://api.groq.com",
               "font-src 'self'",
               "frame-src 'none'",
               "object-src 'none'",

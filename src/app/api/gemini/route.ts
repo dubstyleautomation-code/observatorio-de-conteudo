@@ -32,9 +32,11 @@ const SYSTEM_PROMPTS: Record<string, string> = {
     5) Competitive advantages to build. Format in Markdown with comparative tables where useful.`,
 };
 
+const GROQ_MODEL = 'llama-3.3-70b-versatile';
+
 export async function POST(request: NextRequest): Promise<NextResponse<GeminiResponse>> {
   try {
-    const apiKey = process.env.GEMINI_API_KEY;
+    const apiKey = process.env.GROQ_API_KEY;
     if (!apiKey) {
       return NextResponse.json(
         { success: false, content: '', error: 'API key not configured' },
@@ -55,32 +57,40 @@ export async function POST(request: NextRequest): Promise<NextResponse<GeminiRes
     const systemPrompt = SYSTEM_PROMPTS[tool];
     const contextStr = context ? `\n\nContext data: ${JSON.stringify(context, null, 2)}` : '';
 
-    const geminiResponse = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
+    const groqResponse = await fetch(
+      'https://api.groq.com/openai/v1/chat/completions',
       {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${apiKey}`,
+        },
         body: JSON.stringify({
-          system_instruction: { parts: [{ text: systemPrompt }] },
-          contents: [{ parts: [{ text: userInput + contextStr }] }],
-          generationConfig: { temperature: 0.7, maxOutputTokens: 2048 },
+          model: GROQ_MODEL,
+          messages: [
+            { role: 'system', content: systemPrompt },
+            { role: 'user', content: userInput + contextStr },
+          ],
+          temperature: 0.7,
+          max_tokens: 2048,
         }),
       }
     );
 
-    if (!geminiResponse.ok) {
+    if (!groqResponse.ok) {
+      const errBody = await groqResponse.text();
       return NextResponse.json(
-        { success: false, content: '', error: `Gemini API error: ${geminiResponse.status}` },
+        { success: false, content: '', error: `AI API error: ${groqResponse.status} — ${errBody.slice(0, 120)}` },
         { status: 502 }
       );
     }
 
-    const geminiData = await geminiResponse.json();
-    const content = geminiData?.candidates?.[0]?.content?.parts?.[0]?.text ?? '';
+    const groqData = await groqResponse.json();
+    const content = groqData?.choices?.[0]?.message?.content ?? '';
 
     if (!content) {
       return NextResponse.json(
-        { success: false, content: '', error: 'Empty response from Gemini' },
+        { success: false, content: '', error: 'Empty response from AI' },
         { status: 502 }
       );
     }
