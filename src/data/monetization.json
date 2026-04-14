@@ -1,0 +1,122 @@
+[
+  {
+    "id": "youtube-ads",
+    "name": "Monetização AdSense YouTube",
+    "type": "ads",
+    "platforms": ["youtube"],
+    "avgMonthlyRevenue": { "min": 500, "max": 15000 },
+    "difficulty": "medium",
+    "timeToFirstRevenue": "3-6 meses",
+    "description": "Receita por CPM/CPC em vídeos com 1.000+ inscritos e 4.000h assistidas. CPM médio no Brasil: R$8-R$25. Canal de 50k inscritos em nicho de finanças pode gerar R$3.000-R$8.000/mês."
+  },
+  {
+    "id": "tiktok-creator-fund",
+    "name": "TikTok Creator Fund",
+    "type": "ads",
+    "platforms": ["tiktok"],
+    "avgMonthlyRevenue": { "min": 150, "max": 3500 },
+    "difficulty": "low",
+    "timeToFirstRevenue": "1-3 meses",
+    "description": "Programa de monetização do TikTok por visualizações. Pagamento por 1.000 views varia de R$0,02 a R$0,08. Mais eficaz combinado com afiliados e patrocínios diretos."
+  },
+  {
+    "id": "substack-paid",
+    "name": "Newsletter Paga Substack",
+    "type": "subscription",
+    "platforms": ["substack-blog", "substack-newsletter"],
+    "avgMonthlyRevenue": { "min": 800, "max": 25000 },
+    "difficulty": "high",
+    "timeToFirstRevenue": "2-6 meses",
+    "description": "Assinaturas mensais ou anuais direto dos leitores. Com 500 assinantes pagantes a R$29/mês, receita de R$14.500/mês. Substack retém 10% + taxas de pagamento."
+  },
+  {
+    "id": "newsletter-sponsorship",
+    "name": "Patrocínio de Newsletter",
+    "type": "sponsorship",
+    "platforms": ["substack-newsletter", "beehiiv-newsletter", "convertkit", "ghost-newsletter"],
+    "avgMonthlyRevenue": { "min": 500, "max": 20000 },
+    "difficulty": "medium",
+    "timeToFirstRevenue": "3-8 meses",
+    "description": "Anúncios patrocinados em newsletters com lista ativa. CPM médio R$50-R$120 para listas de nicho. Com 10k assinantes e 45% de abertura, pode cobrar R$500-R$2.000 por edição."
+  },
+  {
+    "id": "affiliate-marketing",
+    "name": "Marketing de Afiliados",
+    "type": "affiliate",
+    "platforms": ["youtube", "instagram", "wordpress", "substack-blog", "tiktok"],
+    "avgMonthlyRevenue": { "min": 300, "max": 18000 },
+    "difficulty": "medium",
+    "timeToFirstRevenue": "1-4 meses",
+    "description": "Comissões por indicação de produtos digitais e físicos. Hotmart/Eduzz pagam 30-80% de comissão em infoprodutos. Amazon Associates paga 2-8%. Nicho financeiro/tech tem melhores taxas."
+  },
+  {
+    "id": "hotmart-digital-product",
+    "name": "Produto Digital na Hotmart",
+    "type": "digital-product",
+    "platforms": ["hotmart", "eduzz", "kiwify"],
+    "avgMonthlyRevenue": { "min": 1500, "max": 45000 },
+    "difficulty": "high",
+    "timeToFirstRevenue": "2-5 meses",
+    "description": "Venda de cursos, ebooks, mentorias e comunidades. Ticket médio de cursos no Brasil: R$197-R$997. Lançamento com lista de 3.000 leads pode gerar R$15.000-R$80.000 em 7 dias."
+  },
+  {
+    "id": "patreon-membership",
+    "name": "Membership no Patreon",
+    "type": "subscription",
+    "platforms": ["patreon", "buy-me-a-coffee", "ko-fi"],
+    "avgMonthlyRevenue": { "min": 400, "max": 12000 },
+    "difficulty": "medium",
+    "timeToFirstRevenue": "1-3 meses",
+    "description": "Assinaturas recorrentes com conteúdo exclusivo por tiers. Tiers populares: R$15, R$35, R$75/mês. Com 200 patrons na média de R$30, receita de R$6.000/mês menos 8% de taxa."
+  },
+  {
+    "id": "brand-sponsorship",
+    "name": "Patrocínio de Marca",
+    "type": "sponsorship",
+    "platforms": ["youtube", "instagram", "tiktok", "twitch", "linkedin"],
+    "avgMonthlyRevenue": { "min": 1000, "max": 50000 },
+    "difficulty": "high",
+    "timeToFirstRevenue": "6-18 meses",
+    "description": "Parcerias pagas com marcas para criação de conteúdo. Criadores com 50k seguidores no Instagram cobram R$1.500-R$8.000 por post patrocinado. Taxa de engajamento importa mais que volume."
+  },
+  {
+    "id": "online-course",
+    "name": "Curso Online Próprio",
+    "type": "digital-product",
+    "platforms": ["hotmart", "eduzz", "kiwify", "udemy", "teachable", "kajabi"],
+    "avgMonthlyRevenue": { "min": 2000, "max": 60000 },
+    "difficulty": "high",
+    "timeToFirstRevenue": "3-8 meses",
+    "description": "Curso estruturado com vídeo-aulas, materiais e comunidade. Ticket médio ideal: R$397-R$1.997. Modelo de lançamento pode gerar receita concentrada. Perpétuo gera renda passiva mensal."
+  },
+  {
+    "id": "freelance-services",
+    "name": "Serviços Freelance",
+    "type": "service",
+    "platforms": ["linkedin", "instagram", "twitter-x"],
+    "avgMonthlyRevenue": { "min": 2500, "max": 20000 },
+    "difficulty": "low",
+    "timeToFirstRevenue": "0-1 mês",
+    "description": "Prestação de serviços usando o conteúdo como portfólio: copywriting, consultoria, gestão de redes, produção de vídeo. Menor barreira de entrada, mas troca tempo por dinheiro."
+  },
+  {
+    "id": "amazon-kdp-ebook",
+    "name": "Ebook na Amazon KDP",
+    "type": "digital-product",
+    "platforms": ["amazon-kdp"],
+    "avgMonthlyRevenue": { "min": 200, "max": 8000 },
+    "difficulty": "medium",
+    "timeToFirstRevenue": "1-3 meses",
+    "description": "Publicação de ebooks na Amazon com royalties de 35-70%. Preço ideal em BRL: R$9,90-R$39,90. Ebook de nicho bem posicionado no Kindle pode vender 50-500 cópias/mês passivamente."
+  },
+  {
+    "id": "ko-fi-tips",
+    "name": "Gorjetas e Apoio (Ko-fi / BMaC)",
+    "type": "digital-product",
+    "platforms": ["ko-fi", "buy-me-a-coffee"],
+    "avgMonthlyRevenue": { "min": 100, "max": 3500 },
+    "difficulty": "low",
+    "timeToFirstRevenue": "0-1 mês",
+    "description": "Apoio voluntário da audiência por contribuições únicas ou recorrentes. Ko-fi não cobra taxa em doações únicas (apenas 5% em memberships). Ideal para criadores de nicho com audiência fiel e menor."
+  }
+]
